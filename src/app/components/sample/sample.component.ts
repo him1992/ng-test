@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import {Student} from './Models/student';
+import {Student} from '../../Models/student';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-sample',
+  templateUrl: './sample.component.html',
+  styleUrls: ['./sample.component.css']
 })
-export class AppComponent {
-  title = 'app';
+export class SampleComponent {
 
   //check with true and false - prop binding works proper and interpolation can`t
   isDisabled : boolean = false;
@@ -16,10 +15,11 @@ export class AppComponent {
   tblColSpan:number = 2;
 
   constructor() { 
-   // console.log('constructor called');
+    console.log('constructor called');
   }
 
   stu1 = new Student(101,'Harsh','Ahmedabad');
   stu2 = new Student(102,'Hardik','Surat');
+
 
 }

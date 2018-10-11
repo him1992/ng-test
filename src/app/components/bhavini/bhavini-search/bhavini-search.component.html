@@ -1,0 +1,25 @@
+<b>Search :</b>
+<table class="table table-responsive text-center">
+  <tr>
+    <td>
+      <input type="radio" name="rdoBrand" value="All" [(ngModel)]="selectedChoclate" 
+      (change)="onChoclateValueChange()"> All ({{ All }})
+    </td>
+    <td>
+      <input type="radio" name="rdoBrand" [(ngModel)]="selectedChoclate" 
+      (change)="onChoclateValueChange()" value="Cadbury"> Cadbury ({{Cadbury}})
+    </td>
+    <td>
+      <input type="radio" name="rdoBrand" [(ngModel)]="selectedChoclate" 
+      (change)="onChoclateValueChange()" value="Nestle"> Nestle ({{Nestle}})
+    </td>
+    <td>
+      <input type="radio" name="rdoBrand" [(ngModel)]="selectedChoclate" 
+      (change)="onChoclateValueChange()" value="Kraft"> Kraft ({{Kraft}})
+    </td>
+    <td>
+      <input type="radio" name="rdoBrand" [(ngModel)]="selectedChoclate" 
+      (change)="onChoclateValueChange()" value="Mars"> Mars ({{Mars}})
+    </td>
+  </tr>
+</table>

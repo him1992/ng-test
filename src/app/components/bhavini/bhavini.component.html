@@ -1,0 +1,72 @@
+<li>
+  <h2>
+    Lecture 3
+  </h2>
+  <hr />
+  <p>
+    <b>Nested Component Example.<br/> Data Passing between Components </b>
+    Note: P-C(Input) / C-P (Output)
+  </p>
+  <br />
+  <br />
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="card">
+          <div class="card-header">Choclate List</div>
+          <div class="card-body">
+          
+            <app-bhavini-search 
+                    [All]="GetChoclateCount('')"
+                    [Cadbury]="GetChoclateCount('Cadbury')"
+                    [Nestle]="GetChoclateCount('Nestle')"
+                    [Kraft]="GetChoclateCount('Kraft')"
+                    [Mars]="GetChoclateCount('Mars')"
+                    (onRadioButtonChange)="CountChoclates($event)">
+            </app-bhavini-search>
+
+
+
+
+            <table class="table table-bordered">
+              <thead>
+                <th>
+                  ID
+                </th>
+                <th>
+                  Choclate Name
+                </th>
+                <th>
+                  Company
+                </th>
+                <th>
+                  Ingradients
+                </th>
+              </thead>
+              <tbody>
+                <ng-container *ngFor="let chok of choklastes">
+                <tr *ngIf="selectedChoclate == 'All' || chok.manufacturer == selectedChoclate">
+                  <td>
+                    {{chok.id}}
+                  </td>
+                  <td>
+                    {{chok.choclateName}}
+                  </td>
+                  <td>
+                    {{chok.description}}
+                  </td>
+                  <td>
+                    {{chok.manufacturer}}
+                  </td>
+                </tr>
+              </ng-container>
+              </tbody>
+            </table>
+          </div>
+         
+        </div>
+        <br />
+      </div>
+    </div>
+  </div>
+</li>

@@ -1,0 +1,184 @@
+
+    <li>
+      <h2>Lecture 1</h2>
+      <hr />
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Interpolation Example (data binding from component to view)
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <hr /> {{stu1 | json}}
+              <br />
+              <br /> {{stu2 | json}}
+              <br />
+              <br /> {{stu1.getStudnetInfo()}}
+              <hr />
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
+                Property Binding Example (data binding from component to view in control property)
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <table>
+                <tr>
+                  <td>
+                    Student ID
+                  </td>
+                  <td>
+                    <input type="text" [value]="stu2.sid">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Student Name
+                  </td>
+                  <td>
+                    <input type="text" [value]="stu2.sname">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Student City
+                  </td>
+                  <td>
+                    <input type="text" [value]="stu2.scity">
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="false" aria-controls="collapseThree">
+                Diff. b/w Interpolation & Property Binding
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              <label>button`s disabled property binded using interpolation <br />
+                <button disabled="{{isDisabled}}">Click Me</button> </label>
+              <br />
+              <br />
+              <label>button`s disabled property binded using propert binding <br />
+                <button [disabled]="isDisabled">Click Me</button> </label>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="false" aria-controls="collapseThree">
+                ATTRIBUTE Binding
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              <table border="1">
+                <tr>
+                  <td>
+                    Yogesh
+                  </td>
+                  <td>
+                    Pande
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Yogesh1
+                  </td>
+                  <td>
+                    Pande1
+                  </td>
+                </tr>
+                <tr>
+                  <td attr.colspan="{{tblColSpan}}">
+                    Yogesh2
+
+                    Pande2
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Yogesh3
+                  </td>
+                  <td>
+                    Pande3
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <br />
+    <li>
+      <h2>
+        Lecture 2
+      </h2>
+      <hr />
+      <p>
+        <b>How to import Bootstrap and Jquery in angular.</b>
+      </p>
+      <br />
+      <ol>
+        <li>
+          For Bootstrap:
+          <br />
+          - install ( npm install bootstrap)
+          <hr />
+          For Jquery:
+          <br />
+          - install ( npm install jquery)
+        </li>
+        <br/>
+        <br/>
+        <li>
+          Call bootstrap css/js & Jquery files in angular(cli).json
+          <br />
+          <br />
+          <p>
+            <b>
+              <u>
+            "styles": [
+            "node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "src/styles.css"
+            ]
+            <br />
+            <br />
+            "scripts": [
+            "node_modules/jquery/dist/jquery.min.js",
+            "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]</u>
+          </b>
+          </p>
+          <br/>
+          <p style="color:red">
+          Note: import css in styles and js in scripts</p>
+        </li>
+      </ol>
+    </li>   
+
+ 
