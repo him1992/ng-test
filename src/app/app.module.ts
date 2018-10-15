@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import {SampleComponent} from './components/sample/sample.component';
 import { BhaviniComponent } from './components/bhavini/bhavini.component';
 import { BhaviniSearchComponent } from './components/bhavini/bhavini-search/bhavini-search.component';
+import { StudentComponent } from './student/student.component';
+import { SearchComponent } from './student/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SampleComponent,
     BhaviniComponent,
-    BhaviniSearchComponent
+    BhaviniSearchComponent,
+    StudentComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,FormsModule

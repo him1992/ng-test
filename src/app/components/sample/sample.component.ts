@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Student} from '../../Models/student';
+import {Student} from '../../models/student';
 
 @Component({
   selector: 'app-sample',
@@ -14,12 +14,11 @@ export class SampleComponent {
   //attribute binding
   tblColSpan:number = 2;
 
-  constructor() { 
+  constructor() {
     console.log('constructor called');
   }
-
-  stu1 = new Student(101,'Harsh','Ahmedabad');
-  stu2 = new Student(102,'Hardik','Surat');
+    stu1 = new Student(101,'Harsh','Ahmedabad');
+    stu2 = new Student(102,'Hardik','Surat');
 
 
 }

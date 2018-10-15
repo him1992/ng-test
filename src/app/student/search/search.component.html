@@ -1,0 +1,22 @@
+<b>Search :</b>
+<table class="table table-responsive text-center">
+  <tr>
+    <td>
+      <input type="radio" name="rdoBrand1" value="All" [(ngModel)]="selectedSubject"
+      (change)="onSubjectValueChange()"> All ({{ All }})
+    </td>
+    <td>
+      <input type="radio" name="rdoBrand1" [(ngModel)]="selectedSubject"
+      (change)="onSubjectValueChange()" value="maths">maths ({{maths}})
+    </td>
+    <td>
+      <input type="radio" name="rdoBrand1" [(ngModel)]="selectedSubject"
+      (change)="onSubjectValueChange()" value="science"> science ({{science}})
+    </td>
+    <td>
+      <input type="radio" name="rdoBrand1" [(ngModel)]="selectedSubject"
+      (change)="onSubjectValueChange()" value="english"> english ({{english}})
+    </td>
+  </tr>
+</table>
+  

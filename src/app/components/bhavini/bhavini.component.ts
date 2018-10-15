@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Chocklate } from '../../Models/choclateModel';
+import { Chocklate } from '../../models/choclateModel';
 
 @Component({
   selector: 'app-bhavini',

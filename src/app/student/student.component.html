@@ -1,0 +1,53 @@
+<p>
+  student works!
+</p>
+<app-search
+        [All]="GetStudentCount('All')"
+        [maths]="GetStudentCount('maths')"
+        [science]="GetStudentCount('science')"
+        [english]="GetStudentCount('english')"
+
+        (onRadioButtonChange)="CountSubject($event)">
+</app-search>
+
+<table class="table table-bordered">
+  <thead>
+    <th>
+      ID
+    </th>
+    <th>
+      StudentInfo Name
+    </th>
+    <th>
+    subject
+    </th>
+    <th>
+      standard
+    </th>
+    <th>
+      marks
+    </th>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let student of StudentInfos">
+    <tr *ngIf="selectedSubject == 'All' || student.subject == selectedSubject">
+      <td>
+        {{student.id}}
+      </td>
+      <td>
+        {{student.StudentName}}
+      </td>
+      <td>
+        {{student.subject}}
+      </td>
+      <td>
+        {{student.standard}}
+      </td>
+      <td>
+        {{student.marks}}
+      </td>
+    </tr>
+
+  </ng-container>
+  </tbody>
+</table>

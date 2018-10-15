@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Student} from './Models/student';
+import {Student} from './models/student';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ export class AppComponent {
   //attribute binding
   tblColSpan:number = 2;
 
-  constructor() { 
+  constructor() {
    // console.log('constructor called');
   }
 
